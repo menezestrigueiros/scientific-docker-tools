@@ -1,12 +1,18 @@
 # 🧑‍🔬 HEP Tools in Docker
 
 A ready-to-use environment for **High Energy Physics (HEP)** with:
+
+- Prebuilt Docker image with all HEP tools ready to use.
+- Shared workspace between containers for seamless workflow.
+- GUI support for ROOT and Geant4 visualizations.
+- Enables reproducible and portable teaching and research setups.
+
+Perfect for students starting new projects, running analysis, and documenting work. Atm, it comes with:
+
 - ROOT
 - Geant4
 - JupyterLab
 - Python libraries (NumPy, Pandas, Uproot, Matplotlib, etc.)
-
-Perfect for students starting new projects, running analysis, and documenting work.
 
 ---
 
@@ -30,7 +36,6 @@ This folder is mounted to your computer so your files stay safe even after stopp
 ## ✨ What You Can Do
 
 - Write and run **Python or C++ ROOT macros** directly inside Jupyter notebooks  
-- Read ROOT files with **Uproot** and analyze with NumPy/Pandas  
 - Create and customize plots with Matplotlib or ROOT  
 - Document your progress with **Markdown + LaTeX**  
 - Export your notebook to **PDF or HTML** for reports  
@@ -40,7 +45,7 @@ This folder is mounted to your computer so your files stay safe even after stopp
 ## 💡 Why Use This?
 
 - ✅ No complicated setup — everything works out of the box  
-- ✅ Same environment for everyone → easy to reproduce results  
+- ✅ Same environment for everyone (containerized) → easy to reproduce results  
 - ✅ Jupyter notebooks make it easy to organize your work into steps  
 - ✅ Great for learning, exploring, and reporting  
 
@@ -50,6 +55,6 @@ This folder is mounted to your computer so your files stay safe even after stopp
 
 - Keep one notebook per week (or per task) to track progress.  
 - Use Markdown cells to explain your code, and LaTeX for equations.  
-- Try exporting to **HTML** (always works) or **PDF** (requires TeX, may be slower).  
+- Try exporting to **PDF** (requires TeX, may be slower).  
 
 ---
