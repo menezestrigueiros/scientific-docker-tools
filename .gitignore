@@ -1,0 +1,12 @@
+/.vscode
+
+# Don't commit build artifacts
+build/
+*/build/
+*.o
+*.so
+*.a
+*.dylib
+*.exe
+CMakeCache.txt
+CMakeFiles/

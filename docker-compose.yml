@@ -1,0 +1,16 @@
+services:
+  scientific-tools:
+    image: menezestrigueiros/hep-tools:latest   # <-- use your new combined image tag
+    container_name: hep-tools
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix      # for GUI (ROOT, Geant4 Qt)
+      - ~/scientific-docker-tools/workspace:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    ports:
+      - "8888:8888"                        # JupyterLab access
+    command: >
+      jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.allow_origin="*"
