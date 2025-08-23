@@ -6,7 +6,7 @@ services:
       - DISPLAY=${DISPLAY}
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix      # for GUI (ROOT, Geant4 Qt)
-      - ~/scientific-docker-tools/workspace:/workspace
+      - ./workspace:/workspace
     working_dir: /workspace
     stdin_open: true
     tty: true
