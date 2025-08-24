@@ -1,8 +1,14 @@
 #!/bin/bash
 set -e
 
-echo "[INFO] Allowing Docker containers to use X11 display..."
-#xhost +local:docker > /dev/null
+# Only enable X11 if NOT in Codespaces
+if [ -z "$CODESPACES" ]; then
+    echo "[INFO] Allowing Docker containers to use X11 display..."
+    xhost +local:docker > /dev/null
+else
+    echo "[INFO] Running inside GitHub Codespaces, skipping X11 setup."
+    export JUPYTER_PORT=0
+fi
 
 echo "[INFO] Starting scientific tools container..."
 # one of Docker Compose’s superpowers: If the image is not present locally, it pulls it from Docker Hub (or any registry you configured)
